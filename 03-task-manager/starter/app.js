@@ -1,4 +1,4 @@
- const connectDd =  require('./db/connect');
+const connectDd =  require('./db/connect');
 const express =require('express');
 const task = require('./routes/task');
 const dotenv = require("dotenv").config();
@@ -19,9 +19,9 @@ const errHandlerMiddleware = require('./middleware/error-handler')
   app.use(notFound);
   app.use(errHandlerMiddleware)
   
- const port = 3000;
+  const port = process.env.PORT || 3000;
 
- app.listen(port, console.log(`server is listening ${port}`));
+  app.listen(port, console.log(`server is listening ${port}`));
 
 
 
