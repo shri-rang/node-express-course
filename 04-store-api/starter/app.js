@@ -28,7 +28,7 @@ app.get('/',(req,res)=>{
 app.use('/api/v1/products',productsRouter );
 
  const port =  process.env.PORT || 5000;
- app.use(notFoundMiddleware);
+app.use(notFoundMiddleware);
 app.use(errorMiddleware);
 
 const start = async() =>{
